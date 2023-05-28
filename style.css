@@ -1,0 +1,16 @@
+.pokemon-container{
+    height : 15 px ;
+    width : 15 px ;
+    border : solid balck 1px ;
+    border-radius: 2 rem;
+}
+.header{ 
+    background : red;
+    color: white;
+    font-size: 3rem;
+    font-weight: 1rem ;
+  }
+  .img{
+    width: 150px;
+    height: 150px;
+  }
