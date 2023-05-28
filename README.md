@@ -1,7 +1,7 @@
 # Pokemon_API
 Walk through JASON FETCH
 
-[https://mhkaaniche.github.io/Pokemon_API/](https://mhkaaniche.github.io/Pokemon_API/)
+[Pokemon](https://mhkaaniche.github.io/Pokemon_API/)
 
 This project is tutorial on using Public APIs to fetch JASON object and construct a HTML structure using Javascript functions.
 
