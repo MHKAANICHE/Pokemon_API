@@ -4,16 +4,19 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 const main = document.querySelector('main')
 // Public API : https://pokeapi.co/api/v2/pokemon/ditto
-const url = "https://pokeapi.co/api/v2/pokemon/"
+//const url = "https://pokeapi.co/api/v2/pokemon/"
+const url = "https://akabab.github.io/superhero-api/api/all.json"
 // asynchronus function : 
 async function  getThemALL(){
     const response = await fetch(url)       // obtain promise
     const data = await response.json()      // obtain json object 
     // json structure to acces pokemon features : 
     // data.results[id]
-    //console.log(data.results)
-    for (let card of data.results){
+    console.log(data)
+    for (let card of data){
         getPokemon(card);
+        console.log(card);
+
     }
    
 
@@ -22,12 +25,12 @@ async function  getThemALL(){
 async function getPokemon(pokemon){
     // json structure : name & url
     //console.log(pokemon)
-    const pokemonApiResponse = await fetch(pokemon.url)
-    const pokemondata = await pokemonApiResponse.json()
+    //const pokemonApiResponse = await fetch(pokemon)
+    //const pokemondata = await pokemonApiResponse.json()
     // json structure to acces pokemon picture svg : 
     // pokemondata. sprites.other.dream_world.front_default
     //console.log(pokemondata. sprites.other.dream_world.front_default)
-    buildCard(pokemondata)
+    buildCard(pokemon)
     likMe();
 
 }
@@ -38,7 +41,8 @@ async function getPokemon(pokemon){
     let img = document.createElement('img')
     img.className = "card-img-top img-fluid rounded bg-dark bg-gradient " // bootstrap styling
 
-    img.src = pokemon.sprites.other.dream_world.front_default
+    //img.src = pokemon.sprites.other.dream_world.front_default
+    img.src = pokemon.images.sm
 
     let cardBody = document.createElement('div')
     cardBody.className = "card-body" // bootstrap styling
